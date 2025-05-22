@@ -1,0 +1,13 @@
+matriz = []
+for coluna in range(5):
+    linha = [0, 0, 0, 0, 0]
+    matriz.append(linha)
+
+matriz[0][0] = 1
+matriz[1][1] = 1
+matriz[2][2] = 1
+matriz[3][3] = 1
+matriz[4][4] = 1
+
+for coluna in range(5):
+    print(matriz[coluna])
