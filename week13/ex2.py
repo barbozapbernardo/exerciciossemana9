@@ -1,9 +1,9 @@
-def e_palindromo(string):
-    if string == string[::-1]:
-        return 'sim'
+def verificar_palindromo(texto):
+    if texto == texto[::-1]:
+        return 'Sim'
     else:
-        return 'não'
+        return 'Não'
 
-palavra = input('Digite uma palavra para saber se é um palindromo: ')
+entrada = input('Digite uma palavra para verificar se é palíndromo: ')
 
-print(e_palindromo(palavra))
+print(verificar_palindromo(entrada))

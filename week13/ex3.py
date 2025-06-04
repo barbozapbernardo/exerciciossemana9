@@ -1,20 +1,17 @@
-def maior_elemento(lista):
-    cont = 0
-    for num in lista:
-        if cont == 0:
-            maior = num
-        else:
-            if maior < num:
-                maior = num
-        cont += 1
-    return maior
-listaNumeros = []
+def encontrar_maior(lista):
+    maior_valor = None
+    for numero in lista:
+        if (maior_valor is None) or (numero > maior_valor):
+            maior_valor = numero
+    return maior_valor
+
+numeros = []
 
 while True:
-    n = int(input("Digite um número inteiro: "))
-    listaNumeros.append(n)
-    escolha = input("Você deseja continuar? [S/N] ").upper()
-    if escolha == 'N':
+    valor = int(input("Digite um número inteiro: "))
+    numeros.append(valor)
+    opcao = input("Quer continuar adicionando? [S/N] ").strip().upper()
+    if opcao == 'N':
         break
-    
-print(maior_elemento(listaNumeros))
+
+print("O maior número digitado foi:", encontrar_maior(numeros))

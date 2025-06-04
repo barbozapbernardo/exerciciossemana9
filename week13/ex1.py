@@ -1,16 +1,16 @@
-def soma_elementos(numeros):
-    soma = 0
-    for num in numeros:
-        soma += num
-    return(soma)
+def somar_itens(lista):
+    total = 0
+    for item in lista:
+        total += item
+    return total
 
-listaNumeros = []
+valores = []
 
 while True:
-    n = int(input("Digite um número inteiro: "))
-    listaNumeros.append(n)
-    escolha = input("Você deseja continuar? [S/N] ").upper()
-    if escolha == 'N':
+    numero = int(input("Informe um número inteiro: "))
+    valores.append(numero)
+    continuar = input("Deseja adicionar mais um número? [S/N] ").strip().upper()
+    if continuar == 'N':
         break
-    
-print(soma_elementos(listaNumeros))
+
+print("A soma dos números é:", somar_itens(valores))
